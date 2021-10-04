@@ -19,6 +19,7 @@ print("Numbers multiplied are",rand4*rand5)
 
 #Cheats
 from time import sleep
+count = 0
 rand6 = random.randint(1,20)
 rand7 = random.randint(1,10)
 rand8 = rand6*rand7
@@ -26,5 +27,6 @@ while rand8 != 100:
     rand6 = random.randint(1,20)
     rand7 = random.randint(1,10)
     rand8 = rand6*rand7
-    print(rand8)
+    count += 1
+    print("Attempt",count,":", rand8)
     sleep(.5)
