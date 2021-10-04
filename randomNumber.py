@@ -16,3 +16,15 @@ print("This dice has",random.randint(1,rand3),"sides")
 rand4 = random.randint(1,20)
 rand5 = random.randint(1,10)
 print("Numbers multiplied are",rand4*rand5)
+
+#Cheats
+from time import sleep
+rand6 = random.randint(1,20)
+rand7 = random.randint(1,10)
+rand8 = rand6*rand7
+while rand8 != 100:
+    rand6 = random.randint(1,20)
+    rand7 = random.randint(1,10)
+    rand8 = rand6*rand7
+    print(rand8)
+    sleep(.5)
