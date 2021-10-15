@@ -1,0 +1,116 @@
+from time import sleep
+
+print("Hello, and welcome to a very cool calculator")
+sleep(0.5)
+
+num1 = float(input("What is your first number? "))
+sleep(0.5)
+num2 = float(input("What is your second number? "))
+
+sleep(0.5)
+print("-------------------------------")
+print("Select an operation below:")
+print("-------------------------------")
+print("Format: Operation | Description")
+print("-------------------------------")
+print("A1 | Num 1 + Num 2")
+print("-------------------------------")
+print("M1 | Num 1 * Num 2")
+print("-------------------------------")
+print("S1 | Num 1 - Num 2")
+print("-------------------------------")
+print("S2 | Num 2 - Num 1")
+print("-------------------------------")
+print("D1 | Num 1 / Num 2")
+print("-------------------------------")
+print("D2 | Num 2 / Num 1")
+print("-------------------------------")
+print("ID1 | Num 1 // Num 2")
+print("-------------------------------")
+print("ID2 | Num 2 // Num 1")
+print("-------------------------------")
+print("EXP1 | Num 1^2")
+print("-------------------------------")
+print("EXP2 | Num 2^2")
+print("-------------------------------")
+print("SQRT1 | Num 1^.5")
+print("-------------------------------")
+print("SQRT2 | Num 2^.5")
+print("-------------------------------")
+
+operation = input("Pick your operation (Case Sensitive): ")
+
+if operation == "A":
+    addition = num1+num2
+    addition = format(addition, ',.3f')
+    num1 = format(num1, ',.3f')
+    num2 = format(num2, ',.3f')
+    print(str(num1) + " + " + str(num2) + " =", addition)
+elif operation == "M":
+    multiplication = num1*num2
+    multiplication = format(multiplication, ',.3f')
+    num1 = format(num1, ',.3f')
+    num2 = format(num2, ',.3f')
+    print(str(num1) + " * " + str(num2) + " =", multiplication)
+elif operation == "S1":
+    subtraction = num1-num2
+    subtraction = format(subtraction, ',.3f')
+    num1 = format(num1, ',.3f')
+    num2 = format(num2, ',.3f')
+    print(str(num1) + " - " + str(num2) + " =", subtraction)
+elif operation == "S2":
+    subtraction2 = num2-num1
+    subtraction2 = format(subtraction2, ',.3f')
+    num1 = format(num1, ',.3f')
+    num2 = format(num2, ',.3f')
+    print(str(num2) + " - " + str(num1) + " =", subtraction2)
+elif operation == "D1":
+    division = num1/num2
+    division = format(division, ',.3f')
+    num1 = format(num1, ',.3f')
+    num2 = format(num2, ',.3f')
+    print(str(num1) + " / " + str(num2) + " =", division)
+elif operation == "D2":
+    division2 = num2/num1
+    division2 = format(division2, ',.3f')
+    num1 = format(num1, ',.3f')
+    num2 = format(num2, ',.3f')
+    print(str(num2) + " / " + str(num1) + " =", division2)
+elif operation == "ID1":
+    intDivison = num1//num2
+    intDivison = format(intDivison, ',.3f')
+    num1 = format(num1, ',.3f')
+    num2 = format(num2, ',.3f')
+    print(str(num1) + " // " + str(num2) + " =", intDivison)
+elif operation == "ID2":
+    intDivison2 = num2//num1
+    intDivison2 = format(intDivison2, ',.3f')
+    num1 = format(num1, ',.3f')
+    num2 = format(num2, ',.3f')
+    print(str(num2) + " // " + str(num1) + " =", intDivison2)
+elif operation == "EXP1":
+    exp1 = num1**2
+    exp1 = format(exp1, ',.3f')
+    num1 = format(num1, ',.3f')
+    num2 = format(num2, ',.3f')
+    print(str(num1) + "^2 " + " =", exp1)
+elif operation == "EXP2":
+    exp2 = num2**2
+    exp2 = format(exp2, ',.3f')
+    num1 = format(num1, ',.3f')
+    num2 = format(num2, ',.3f')
+    print(str(num2) + "^2 " + " =", exp2)
+elif operation == "SQRT1":
+    sqrt1 = num1**.5
+    sqrt1 = format(sqrt1, ',.3f')
+    num1 = format(num1, ',.3f')
+    num2 = format(num2, ',.3f')
+    print("Square Root of " + str(num1) + " =", sqrt1)
+elif operation == "SQRT2":
+    sqrt2 = num2**.5
+    sqrt2 = format(sqrt2, ',.3f')
+    num1 = format(num1, ',.3f')
+    num2 = format(num2, ',.3f')
+    print("Square Root of " + str(num2) + " =", sqrt2)
+else:
+    print("Error | Not A Valid Operation")
