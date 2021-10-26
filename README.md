@@ -1,2 +1,2 @@
 # bee-stinger
-comp sci class projects
+This is a very cool repo filled with comp sci projects.
