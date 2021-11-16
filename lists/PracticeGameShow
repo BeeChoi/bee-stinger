@@ -1,0 +1,32 @@
+a = ['a', 'b', 'c', 'd', 'e']
+print(a[0])
+print(a[3])
+#prediction: Prints a and d on different lines
+#outcome: Prints a and d on different lines
+
+a = ['a', 'b', 'c', 'd', 'e']
+print(a[len(a) - 3])
+#prediction: Print c 
+#outcome: Print c
+
+a = ['a', 'b', 'c', 'd', 'e']
+print(a[len(a) - 6])
+#prediction: Print e
+#outcome: Print e
+
+a = ['a', 'b', 'c', 'd', 'e']
+a[3] = 'haha'
+print(a)
+#prediction:  Print ['a', 'b', 'c', 'haha', 'e']
+#outcome: Print ['a', 'b', 'c', 'haha', 'e']
+
+# Game Show Below
+
+Prizes = ["M1 Max MacBook Pro 16 Inch", "Elmo Doll", "Toy Car", "$10", "A Pony", "GeForce RTX 3090", "NZXT Kraken Z73 Liquid Cooler", "Donda Deluxe Vinyl", "A Stawberry Patch", "Cabbage Patch Doll"]
+
+Play = "Y"
+
+while Play == "Yes":
+  Seleccionar = int(input("Hello, what prize would you like to receive? (1-10) "))
+  print("You got a(n):", Prizes[Seleccionar - 1])
+  Play = input("Do you want to win another prize? (Y/N) ")
