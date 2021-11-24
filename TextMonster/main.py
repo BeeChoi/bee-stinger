@@ -73,7 +73,7 @@ while gameState == 'ongoing':
         print("You cannot escape if you have a sword. You were killed by the monster.")
         gameState = "lost"
       elif (currentFloor == 2) and (currentRoom == 1) and (floor2[0] == "magicItem"):
-        if (floor0[3] == "boss") and (floor0[1] == "monster") and (floor2[2] == "monster") and (floor2[3] == "monster"):
+        if (floor0[3] == "boss") or (floor0[1] == "monster") or (floor2[2] == "monster") or (floor2[3] == "monster"):
           print("You did not complete one or all of the following objectives: defeat all the monsters and/or defeat the boss. You may not proceed.")
         else:
           currentRoom -=1
@@ -81,7 +81,7 @@ while gameState == 'ongoing':
         print("You are unarmed and the monster had pity. You escaped.")
         currentRoom -= 1
     elif (currentFloor == 2) and (currentRoom == 1) and (floor2[0] == "magicItem"):
-        if (floor0[3] == "boss") and (floor0[1] == "monster") and (floor2[2] == "monster") and (floor2[3] == "monster"):
+        if (floor0[3] == "boss") or (floor0[1] == "monster") or (floor2[2] == "monster") or (floor2[3] == "monster"):
           print("You did not complete the following objective: defeat all the monsters. You may not proceed.")
         else:
           currentRoom -=1
@@ -94,15 +94,16 @@ while gameState == 'ongoing':
         print("You cannot escape if you have a sword. You were killed by the monster.")
         gameState = "lost"
       elif (currentFloor == 0) and (currentRoom == 3) and (floor0[4] == "prize"):
-        if (floor0[3] == "boss") and (floor0[1] == "monster") and (floor2[2] == "monster") and (floor2[3] == "monster") and (inventory.count("magicItem") == 0):
+        if (floor0[3] == "boss") or (floor0[1] == "monster") or (floor2[2] == "monster") or (floor2[3] == "monster") or (inventory.count("magicItem") == 0):
           print("You did not complete one or all of the following objectives: defeat all the monsters, defeat the boss, and/or obtain the magic item. You may not proceed.")
         else:
           currentRoom +=1
+          gameState = "won"
       elif inventory.count("sword") == 0:
         print("You are unarmed and the monster had pity. You may escape.")
         currentRoom += 1
     elif (currentFloor == 0) and (currentRoom == 3) and (floor0[4] == "prize"):
-        if (floor0[3] == "boss") and (floor0[1] == "monster") and (floor2[2] == "monster") and (floor2[3] == "monster") and (inventory.count("magicItem") == 0):
+        if (floor0[3] == "boss") or (floor0[1] == "monster") or (floor2[2] == "monster") or (floor2[3] == "monster") or (inventory.count("magicItem") == 0):
           print("You did not complete one or all of the following objectives: defeat all the monsters, defeat the boss, and/or obtain the magic item. You may not proceed.")
         else:
           currentRoom +=1
