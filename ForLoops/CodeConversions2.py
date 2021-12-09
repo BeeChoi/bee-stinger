@@ -3,7 +3,7 @@ print("Part 1")
 counter = 0
 numbers = []
 # 1) What values does counter equal as it loops?
-# 0, 1, 2, 3, 4, 5, 6, 7
+# 0, 1, 2, 3, 4, 5, 6
 while counter < 7: 
 	num = int(input("Enter a number: "))
 	numbers.append(num) # Appends the inputted number to the "numebers" list
@@ -27,7 +27,7 @@ print("\nPart 2")
 counter = 0
 numbers = []
 # 3) What values does counter equal as it loops?
-# 0, 2, 4, 6, 8, 10
+# 0, 2, 4, 6, 8
 while counter < 10:
 	num = int(input("Enter a number: "))
 	numbers.append(num) # Appends the inputted number to the "numebers" list
@@ -52,7 +52,7 @@ print("\nPart 3")
 counter = 4
 numbers = []
 # 5) What values does counter equal as it loops?
-#4, 3, 2, 1, 0
+#4, 3, 2, 1
 
 while counter > 0:
 	num = int(input("Enter a number: "))
