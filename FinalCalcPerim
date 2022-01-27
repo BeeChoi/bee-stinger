@@ -1,0 +1,55 @@
+import math 
+
+def triangle(): 
+  side1 = float(input("Enter the length of side 1: "))
+  side2 = float(input("Enter the length of side 2: "))
+  side3 = float(input("Enter the length of side 3: "))
+  peri = side1 + side2 + side3
+  return peri
+
+def circle(): 
+  rad = float(input("Enter the radius of the circle: "))
+  peri = 2*rad*math.pi
+  return peri
+
+def square(): 
+  side = float(input("Enter the length of a side of the square: "))
+  peri = side*4
+  return peri
+
+def rectangle_paralellogram(): 
+  l = float(input("Enter the length of the rectangle (the longer side): "))
+  w = float(input("Enter the width of the rectangle (the shorter side): "))
+  peri = 2*(l + w)
+  return peri
+
+def trapezoid(): 
+  side1 = float(input("Enter the length of side 1: "))
+  side2 = float(input("Enter the length of side 2: "))
+  side3 = float(input("Enter the length of side 3: "))
+  side4 = float(input("Enter the length of side 4: "))
+  peri = side1 + side2 + side3 + side4
+  return peri
+
+def main():
+  loop = "yes"
+  while loop == "yes":
+    user = input("Enter one of the following shapes (triangle, circle, square, rectangle, parallelogram, trapezoid) to calculate the perimeter of the shape: ")
+    if user == "triangle": 
+      perim = triangle()
+    elif user == "circle": 
+      perim = circle()
+    elif user == "square": 
+      perim = square()
+    elif user == "rectangle": 
+      perim = rectangle_paralellogram()
+    elif user == "parallelogram": 
+      perim = rectangle_paralellogram()
+    elif user == "trapezoid": 
+      perim = trapezoid()
+    else: 
+      print("That shape is an invalid shape for this program. Enter a valid shape.")
+    print(perim)
+    loop = input("Want to continue? (yes/no, case sensative)")
+
+main()
