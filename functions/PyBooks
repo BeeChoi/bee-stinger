@@ -1,0 +1,27 @@
+def getOrderTotal(ip, pc):
+  sumPyIntro = 0
+  sumPyCook = 0
+  sumTotal = 0
+  if (ip == 1 and pc == 0) or (ip == 0 and pc == 1):
+    sumPyIntro = ip * 20.95
+    sumPyCook = pc * 21.95
+    sumTotal = sumPyCook + sumPyIntro
+    return(sumTotal)
+  if (ip ==1) and (pc == 1):
+    sumTotal = 39.95
+    return sumTotal
+  if (ip + pc) in range(3,12):
+    sumTotal = (ip + pc) * 16.95
+    return sumTotal
+  if (ip + pc) >= 12:
+    sumTotal = (ip + pc) * 16.00
+    return sumTotal
+
+
+def main():
+  ip = int(input("How many Intro to Python Books do you want? "))
+  pc = int(input("How many Intro to Python Books do you want? "))
+  totalPrice = getOrderTotal(ip, pc)
+  print(format(totalPrice,".2f"))
+
+main()
